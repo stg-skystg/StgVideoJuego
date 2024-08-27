@@ -28,7 +28,7 @@ namespace StgVideoJuego.Helper
         /// <returns>bool segun la existencia</returns>
         public async Task<bool> BlVideoGameExiste(string PrmStrTitulo, string PrmStrCompania)
         {
-            return await ObjDb.VideoGame.AnyAsync(x => x.Titulo == PrmStrTitulo || x.Compania == PrmStrCompania);
+            return await ObjDb.VideoGame.AnyAsync(x => x.Titulo == PrmStrTitulo && x.Compania == PrmStrCompania);
         }
         /// <summary>
         /// Funcion validar de existencia usuario

@@ -33,7 +33,7 @@ builder.Services.AddAuthentication(cfg => {
         ClockSkew = TimeSpan.Zero
     };
 });
-
+builder.Services.AddMemoryCache();
 builder.Services.AddCors();
 var app = builder.Build();
 
